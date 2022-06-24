@@ -9,7 +9,7 @@ class App extends React.Component {
       <div className="full">
         <h1>Tryunfo</h1>
         <Form />
-        <Card cardTrunfo="true" />
+        <Card />
       </div>
     );
   }

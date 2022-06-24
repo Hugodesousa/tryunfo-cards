@@ -36,9 +36,11 @@ class Card extends Component {
           <p data-testid="rare-card">{ cardRare }</p>
         </div>
         <div>
-          { cardTrunfo === true
-            ? <p data-testid="trunfo-card">{ cardTrunfo }</p>
-            : <p />}
+          {
+            cardTrunfo
+              ? <p data-testid="trunfo-card"> Super Trunfo </p>
+              : <> </>
+          }
 
         </div>
       </div>
