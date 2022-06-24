@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from './components/Card';
 import Form from './components/Form';
 import './style/style.css';
 
@@ -7,8 +8,8 @@ class App extends React.Component {
     return (
       <div className="full">
         <h1>Tryunfo</h1>
-        <h2> hello </h2>
         <Form />
+        <Card cardTrunfo="true" />
       </div>
     );
   }

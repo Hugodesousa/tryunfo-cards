@@ -1,0 +1,49 @@
+import React, { Component } from 'react';
+
+class Card extends Component {
+  render() {
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    } = this.props;
+    return (
+      <div className="card">
+        <div>
+          <h1 data-testid="name-card">{cardName}</h1>
+        </div>
+        <div>
+          <img
+            src={ cardImage }
+            alt={ cardName }
+            data-testid="image-card"
+          />
+        </div>
+        <div>
+          <h2 data-testid="description-card">{ cardDescription }</h2>
+        </div>
+        <div>
+          <p data-testid="attr1-card">{ cardAttr1 }</p>
+          <p data-testid="attr2-card">{ cardAttr2 }</p>
+          <p data-testid="attr3-card">{ cardAttr3 }</p>
+        </div>
+        <div>
+          <p data-testid="rare-card">{ cardRare }</p>
+        </div>
+        <div>
+          { cardTrunfo === true
+            ? <p data-testid="trunfo-card">{ cardTrunfo }</p>
+            : <p />}
+
+        </div>
+      </div>
+
+    );
+  }
+}
+export default Card;
