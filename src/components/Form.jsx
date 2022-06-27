@@ -12,6 +12,7 @@ class Form extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      // eslint-disable-next-line no-unused-vars
       hasTrunfo,
       isSaveButtonDisabled,
       onInputChange,

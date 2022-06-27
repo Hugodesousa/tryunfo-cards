@@ -28,7 +28,6 @@ class App extends React.Component {
     this.setState({
       [target.id]: value,
     });
-    console.log(target);
   }
 
   render() {
