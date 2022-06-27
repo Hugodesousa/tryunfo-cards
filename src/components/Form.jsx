@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Form extends Component {
   render() {
@@ -31,40 +32,40 @@ class Form extends Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="description">
+          <label htmlFor="cardDescription">
             Descrição
             <textarea
               data-testid="description-input"
-              id="description"
+              id="cardDescription"
               value={ cardDescription }
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="attr1">
+          <label htmlFor="cardAttr1">
             <input
               type="number"
-              name="attr1"
-              id="attr1"
+              name="cardAttr1"
+              id="cardAttr1"
               data-testid="attr1-input"
               value={ cardAttr1 }
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="attr2">
+          <label htmlFor="cardAttr2">
             <input
               type="number"
-              name="attr2"
-              id="attr2"
+              name="cardAttr2"
+              id="cardAttr2"
               data-testid="attr2-input"
               value={ cardAttr2 }
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="attr3">
+          <label htmlFor="cardAttr3">
             <input
               type="number"
-              name="attr3"
-              id="attr3"
+              name="cardAttr3"
+              id="cardAttr3"
               data-testid="attr3-input"
               value={ cardAttr3 }
               onChange={ onInputChange }
@@ -73,6 +74,7 @@ class Form extends Component {
           <label htmlFor="image">
             Imagem
             <input
+              id="cardImage"
               type="text"
               data-testid="image-input"
               value={ cardImage }
@@ -82,7 +84,7 @@ class Form extends Component {
           <label htmlFor="options">
             <select
               name="options"
-              id="options"
+              id="cardRare"
               data-testid="rare-input"
               value={ cardRare }
               onChange={ onInputChange }
@@ -91,11 +93,11 @@ class Form extends Component {
               <option value="raro"> raro </option>
               <option value="muito raro"> muito raro </option>
             </select>
-            <label htmlFor="check">
+            <label htmlFor="cardTrunfo">
               <input
                 type="checkbox"
                 name="check"
-                id="check"
+                id="cardTrunfo"
                 data-testid="trunfo-input"
                 checked={ cardTrunfo }
                 onChange={ onInputChange }
@@ -116,4 +118,20 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  cardName: PropTypes.string.isRequired,
+  cardDescription: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.string.isRequired,
+  cardAttr2: PropTypes.string.isRequired,
+  cardAttr3: PropTypes.string.isRequired,
+  cardImage: PropTypes.string.isRequired,
+  cardRare: PropTypes.string.isRequired,
+  cardTrunfo: PropTypes.bool.isRequired,
+  hasTrunfo: PropTypes.bool.isRequired,
+  isSaveButtonDisabled: PropTypes.bool.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  onSaveButtonClick: PropTypes.func.isRequired,
+};
+
 export default Form;
