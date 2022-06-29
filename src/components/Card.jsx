@@ -20,13 +20,20 @@ class Card extends Component {
         </div>
         <div>
           <img
+            className="images"
             src={ cardImage }
             alt={ cardName }
             data-testid="image-card"
           />
         </div>
         <div>
-          <h2 data-testid="description-card">{ cardDescription }</h2>
+          <p
+            data-testid="description-card"
+            className="descriptioncard"
+          >
+            { cardDescription }
+
+          </p>
         </div>
         <div>
           <p data-testid="attr1-card">{ cardAttr1 }</p>
