@@ -6,8 +6,38 @@
 .form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .creatCart {
   padding: 5px;
+}
+.images {
+  width: 100px;
+}
+
+.card {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
+.descriptioncard {
+  border: 3px solid blue;
+}
+
+.button {
+  color: aliceblue;
+}
+
+.divComponentes {
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+}
+
+.labelIn {
 }
