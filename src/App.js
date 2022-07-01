@@ -59,6 +59,13 @@ class App extends React.Component {
     return verify4;
   };
 
+ checkTrunfo = () => {
+   const { cardState } = this.state;
+   const filter = cardState.some((card) => card.cardTrunfo);
+   this.setState({ hasTrunfo: filter });
+   console.log(filter);
+ }
+
   onSaveButtonClick = () => {
     const {
       cardName,
@@ -93,7 +100,7 @@ class App extends React.Component {
       cardRare: '',
       isSaveButtonDisabled: true,
       cardTrunfo: false,
-    });
+    }, () => this.checkTrunfo());
   };
 
   buttonDisabled() {
@@ -153,6 +160,7 @@ class App extends React.Component {
             cardRare={ cardRare }
             cardTrunfo={ cardTrunfo }
             hasTrunfo={ hasTrunfo }
+            checkTrunfo={ this.checkTrunfo }
           />
         </div>
 

@@ -4,9 +4,9 @@
 }
 
 .form {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .creatCart {
@@ -20,9 +20,9 @@
   background-color: red;
   display: flex;
   flex-direction: column;
-  width: 300px;
   padding: 10px;
   text-align: center;
+  width: 300px;
 }
 
 .descriptioncard {
