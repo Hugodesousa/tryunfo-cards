@@ -39,6 +39,7 @@ class Form extends Component {
         <form className="form">
           <label htmlFor="cardName" className="labelIn">
             Nome
+            {' '}
             <input
               type="text"
               data-testid="name-input"
