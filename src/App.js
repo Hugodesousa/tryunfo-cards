@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
 import './style/style.css';
-import data from './data';
+// import data from './data';
 
 class App extends React.Component {
   constructor() {
@@ -18,7 +18,7 @@ class App extends React.Component {
       isSaveButtonDisabled: true,
       cardTrunfo: false,
       hasTrunfo: false,
-      cardState: [...data],
+      cardState: [],
     };
     this.onInputChange = this.onInputChange.bind(this);
     this.buttonDisabled = this.buttonDisabled.bind(this);

@@ -56,7 +56,7 @@ class Card extends Component {
           </p>
         </div>
         <div>
-          <p data-testid="rare-card">{ cardRare.toUpperCase() }</p>
+          <p data-testid="rare-card">{ cardRare }</p>
         </div>
         <div className="divtrunfo">
           {
