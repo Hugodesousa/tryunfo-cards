@@ -1,22 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../style/style.css';
-// import Checkbox from './Checkbox';
 
 class Form extends Component {
-  // checkbox = () => (
-  //   <label htmlFor="cardTrunfo">
-  //     <input
-  //       type="checkbox"
-  //       name="check"
-  //       id="cardTrunfo"
-  //       data-testid="trunfo-input"
-  //       checked={ cardTrunfo }
-  //       onChange={ onInputChange }
-  //     />
-  //   </label>
-  // )
-
   render() {
     const {
       cardName,
@@ -35,13 +21,11 @@ class Form extends Component {
     return (
 
       <div className="creatCart">
-        <h1>Adicionar nova carta</h1>
         <form className="form">
+          <h2>Adicionar nova carta</h2>
           <label htmlFor="cardName" className="labelIn">
-            Nome
-            {' '}
-
             <input
+              placeholder="Nome"
               type="text"
               data-testid="name-input"
               id="cardName"
@@ -49,17 +33,18 @@ class Form extends Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="cardDescription">
-            Descrição
+          <label htmlFor="cardDescription" className="labelIn">
             <textarea
+              placeholder="Descrição"
               data-testid="description-input"
               id="cardDescription"
               value={ cardDescription }
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="cardAttr1">
+          <label htmlFor="cardAttr1" className="labelIn">
             <input
+              placeholder="Enredo '0 - 80'"
               type="number"
               name="cardAttr1"
               id="cardAttr1"
@@ -68,8 +53,9 @@ class Form extends Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="cardAttr2">
+          <label htmlFor="cardAttr2" className="labelIn">
             <input
+              placeholder="Personagens '0 - 80'"
               type="number"
               name="cardAttr2"
               id="cardAttr2"
@@ -78,8 +64,9 @@ class Form extends Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="cardAttr3">
+          <label htmlFor="cardAttr3" className="labelIn">
             <input
+              placeholder="Arte '0 - 50'"
               type="number"
               name="cardAttr3"
               id="cardAttr3"
@@ -88,9 +75,9 @@ class Form extends Component {
               onChange={ onInputChange }
             />
           </label>
-          <label htmlFor="image">
-            Imagem
+          <label htmlFor="image" className="labelIn">
             <input
+              placeholder="URL da imagem"
               id="cardImage"
               type="text"
               data-testid="image-input"

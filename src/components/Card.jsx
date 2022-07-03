@@ -13,6 +13,8 @@ class Card extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      del,
+      delCard,
     } = this.props;
     return (
       <div className="card">
@@ -36,22 +38,45 @@ class Card extends Component {
 
           </p>
         </div>
-        <div>
-          <p data-testid="attr1-card">{ cardAttr1 }</p>
-          <p data-testid="attr2-card">{ cardAttr2 }</p>
-          <p data-testid="attr3-card">{ cardAttr3 }</p>
+        <div className="atrr">
+          <p data-testid="attr1-card">
+            {' '}
+            Enredo:
+            {' '}
+            { cardAttr1 }
+          </p>
+          <p data-testid="attr2-card">
+            Personagens:
+            {' '}
+            { cardAttr2 }
+          </p>
+          <p data-testid="attr3-card">
+            Arte:
+            { cardAttr3 }
+          </p>
         </div>
         <div>
-          <p data-testid="rare-card">{ cardRare }</p>
+          <p data-testid="rare-card">{ cardRare.toUpperCase() }</p>
         </div>
-        <div>
+        <div className="divtrunfo">
           {
             cardTrunfo
-              ? <p data-testid="trunfo-card"> Super Trunfo </p>
+              ? <p className="trunfo" data-testid="trunfo-card"> Super Trunfo </p>
               : <> </>
           }
 
         </div>
+        {del === 'del'
+          ? (
+            <button
+              className="button"
+              type="button"
+              onClick={ delCard }
+              data-testid="delete-button"
+            >
+              Apagar
+            </button>)
+          : <> </> }
       </div>
 
     );
@@ -66,7 +91,9 @@ Card.propTypes = {
   cardAttr3: PropTypes.string.isRequired,
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
+  del: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
+  delCard: PropTypes.func.isRequired,
 };
 
 export default Card;

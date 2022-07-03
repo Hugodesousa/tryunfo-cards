@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
 import './style/style.css';
+import data from './data';
 
 class App extends React.Component {
   constructor() {
@@ -17,7 +18,7 @@ class App extends React.Component {
       isSaveButtonDisabled: true,
       cardTrunfo: false,
       hasTrunfo: false,
-      cardState: [],
+      cardState: [...data],
     };
     this.onInputChange = this.onInputChange.bind(this);
     this.buttonDisabled = this.buttonDisabled.bind(this);
@@ -63,7 +64,6 @@ class App extends React.Component {
    const { cardState } = this.state;
    const filter = cardState.some((card) => card.cardTrunfo);
    this.setState({ hasTrunfo: filter });
-   console.log(filter);
  }
 
   onSaveButtonClick = () => {
@@ -103,6 +103,10 @@ class App extends React.Component {
     }, () => this.checkTrunfo());
   };
 
+  delCard = (event) => {
+    console.log(event);
+  }
+
   buttonDisabled() {
     const { cardName,
       cardDescription,
@@ -133,7 +137,7 @@ class App extends React.Component {
     } = this.state;
     return (
       <div className="full">
-        <div>
+        <div className="title">
           <h1>Tryunfo</h1>
         </div>
         <div className="divComponentes">
@@ -164,7 +168,7 @@ class App extends React.Component {
             checkTrunfo={ this.checkTrunfo }
           />
         </div>
-        <div>
+        <div className="saveCards">
           {cardState.map((card) => (<Card
             cardName={ card.cardName }
             cardDescription={ card.cardDescription }
@@ -174,6 +178,8 @@ class App extends React.Component {
             cardImage={ card.cardImage }
             cardRare={ card.cardRare }
             cardTrunfo={ card.cardTrunfo }
+            del="del"
+            delCard={ this.delCard }
             key={ card.cardName }
           />))}
         </div>
