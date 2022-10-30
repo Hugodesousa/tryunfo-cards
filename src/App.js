@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
 import './style/style.css';
-// import data from './data';
+import data from './data';
 
 class App extends React.Component {
   constructor() {
@@ -18,7 +18,7 @@ class App extends React.Component {
       isSaveButtonDisabled: true,
       cardTrunfo: false,
       hasTrunfo: false,
-      cardState: [],
+      cardState: [...data],
     };
     this.onInputChange = this.onInputChange.bind(this);
     this.buttonDisabled = this.buttonDisabled.bind(this);
@@ -103,8 +103,13 @@ class App extends React.Component {
     }, () => this.checkTrunfo());
   };
 
-  delCard = (event) => {
-    console.log(event);
+  delCard = (currName) => {
+    const { cardState,
+    } = this.state;
+    const newList = cardState.filter((el) => el.cardName !== currName);
+    this.setState(newList);
+
+    console.log(newList);
   }
 
   buttonDisabled() {
@@ -179,7 +184,7 @@ class App extends React.Component {
             cardRare={ card.cardRare }
             cardTrunfo={ card.cardTrunfo }
             del="del"
-            delCard={ this.delCard }
+            delCard={ () => this.delCard(card.cardName) }
             key={ card.cardName }
           />))}
         </div>
