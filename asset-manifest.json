@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/tryunfo/static/css/main.5dfca9c5.css",
-    "main.js": "/tryunfo/static/js/main.c5d42551.js",
-    "index.html": "/tryunfo/index.html",
-    "main.5dfca9c5.css.map": "/tryunfo/static/css/main.5dfca9c5.css.map",
-    "main.c5d42551.js.map": "/tryunfo/static/js/main.c5d42551.js.map"
+    "main.css": "/tryunfo-cards/static/css/main.5dfca9c5.css",
+    "main.js": "/tryunfo-cards/static/js/main.c5d42551.js",
+    "index.html": "/tryunfo-cards/index.html",
+    "main.5dfca9c5.css.map": "/tryunfo-cards/static/css/main.5dfca9c5.css.map",
+    "main.c5d42551.js.map": "/tryunfo-cards/static/js/main.c5d42551.js.map"
   },
   "entrypoints": [
     "static/css/main.5dfca9c5.css",
