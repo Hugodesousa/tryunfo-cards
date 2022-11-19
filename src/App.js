@@ -1,3 +1,4 @@
+/* eslint-disable react/no-did-mount-set-state */
 import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
@@ -18,10 +19,16 @@ class App extends React.Component {
       isSaveButtonDisabled: true,
       cardTrunfo: false,
       hasTrunfo: false,
-      cardState: [...data],
+      cardState: [],
     };
     this.onInputChange = this.onInputChange.bind(this);
     this.buttonDisabled = this.buttonDisabled.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      cardState: [...data],
+    });
   }
 
   onInputChange({ target }) {
@@ -107,9 +114,9 @@ class App extends React.Component {
     const { cardState,
     } = this.state;
     const newList = cardState.filter((el) => el.cardName !== currName);
-    this.setState(newList);
-
-    console.log(newList);
+    this.setState({
+      cardState: newList,
+    });
   }
 
   buttonDisabled() {
