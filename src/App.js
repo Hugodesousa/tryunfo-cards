@@ -1,4 +1,3 @@
-/* eslint-disable react/no-did-mount-set-state */
 import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
@@ -26,9 +25,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({
-      cardState: [...data],
-    });
+    this.initDatas();
   }
 
   onInputChange({ target }) {
@@ -38,6 +35,12 @@ class App extends React.Component {
     this.setState({
       [target.id]: value,
     }, () => this.buttonDisabled());
+  }
+
+  initDatas = () => {
+    this.setState({
+      cardState: [...data],
+    });
   }
 
   attrButtonDisabled = () => {
