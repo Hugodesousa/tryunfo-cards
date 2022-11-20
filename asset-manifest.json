@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/tryunfo-cards/static/css/main.5dfca9c5.css",
-    "main.js": "/tryunfo-cards/static/js/main.c5d42551.js",
+    "main.js": "/tryunfo-cards/static/js/main.7493257d.js",
     "index.html": "/tryunfo-cards/index.html",
     "main.5dfca9c5.css.map": "/tryunfo-cards/static/css/main.5dfca9c5.css.map",
-    "main.c5d42551.js.map": "/tryunfo-cards/static/js/main.c5d42551.js.map"
+    "main.7493257d.js.map": "/tryunfo-cards/static/js/main.7493257d.js.map"
   },
   "entrypoints": [
     "static/css/main.5dfca9c5.css",
-    "static/js/main.c5d42551.js"
+    "static/js/main.7493257d.js"
   ]
 }
